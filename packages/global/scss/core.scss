@@ -531,4 +531,20 @@ label {
   }
 }
 
+.callout-cards {
+  &__description {
+    display: flex;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      .col {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .podcast-logo-description-wrapper {
+        padding-top: 24px;
+      }
+    }
+  }
+}
+
 /*! critical:end */
