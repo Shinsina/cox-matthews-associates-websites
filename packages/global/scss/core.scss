@@ -531,17 +531,21 @@ label {
   }
 }
 
+.latest-podcast,
 .callout-cards {
+  background-color: #f0f1f2;
+  padding: map-get($spacers, block);
+  .callout-cards {
+    padding: 0;
+  }
   &__description {
+    margin-top: map-get($spacers, block);
     display: flex;
     @include media-breakpoint-down(md) {
       flex-direction: column;
       .col {
         padding-left: 0;
         padding-right: 0;
-      }
-      .podcast-logo-description-wrapper {
-        padding-top: 24px;
       }
     }
   }

@@ -22,7 +22,7 @@ $ const withVideo = defaultValue(input.withVideo, false);
       <marko-web-query|{ nodes, section }| name="website-scheduled-content" params=queryParams>
         $ const [node] = nodes;
         <marko-web-element block-name="callout-cards" name="col">
-        <marko-web-block name=blockName>
+        <marko-web-block name="callout-cards">
           <marko-web-element block-name="callout-cards" name="header">
             <marko-web-icon name="file" modifiers=[blockName] />
             ${section.name}
@@ -136,7 +136,7 @@ $ const withVideo = defaultValue(input.withVideo, false);
         <marko-web-icon name="file" modifiers=[blockName] />
         ${section.name}
       </marko-web-element>
-          <div style="display: flex">
+          <marko-web-element block-name=blockName name="description">
             <div class="podcast-logo-description-wrapper">
               <marko-web-img
                 class="section__logo"
@@ -166,7 +166,7 @@ $ const withVideo = defaultValue(input.withVideo, false);
                 </@body>
               </marko-web-node>
             </div>
-        </div>
+        </marko-web-element>
         <marko-web-node
           type=`${node.type}-content`
           card=true
